@@ -1,11 +1,14 @@
 package Componentes;
 
+import Enum.TipoPeca;
+
 public class Mem_Ram_Kingsdom extends PecasDecorator{
 	int custo;
 	//String descricao;
 	
 	
 	public Mem_Ram_Kingsdom(Gabinete g){
+		tipoPeca = TipoPeca.MEMORIA;
 		descricao= g.descricao + "c/ Memória Kingsdom";
 	}
 	

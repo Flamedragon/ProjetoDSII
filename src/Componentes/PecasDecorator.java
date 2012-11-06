@@ -4,7 +4,7 @@ import Enum.TipoPeca;
 
 public abstract class PecasDecorator extends Gabinete{
 	
-	private TipoPeca tipoPeca;
+	protected TipoPeca tipoPeca;
 	
 	public abstract String getDescricao();
 

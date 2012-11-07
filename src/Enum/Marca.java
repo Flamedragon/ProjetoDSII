@@ -11,7 +11,9 @@ public enum Marca {
 	AMD("AMD"),
 	SAMSUNG("Samsung"),
 	KINGSTON("Kingston"),
-	CORSAIR("Corsair");
+	CORSAIR("Corsair"),
+	LG("Lg"),
+	SONY("Sony");
 	
     private String nome;
 

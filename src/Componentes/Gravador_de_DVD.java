@@ -14,18 +14,31 @@ public Gravador_de_DVD(Gabinete g, Marca m) {
 	gab = g;
 	marca= m;
 }
-	
-	@Override
-	public String getDescricao() {
-		// TODO Auto-generated method stub
-		return descricao;
-	}
 
-	@Override
-	public float getCusto() {
-		// TODO Auto-generated method stub
-		return 100;
+
+@Override
+public String getDescricao() {
+	
+	return gab.getDescricao() + ", " + this.tipoPeca + marca;
+}
+
+@Override
+public float getCusto() {
+	// TODO Auto-generated method stub
+	
+	float cus;
+	
+    switch (marca) {
+
+    case LG: cus = 300;	break;
+	case SONY: cus = 380; break;
+
+	default: cus = 0;	break;
 	}
+     
+    return cus + gab.getCusto();
+	 
+}
 	
 	public static List<Marca> getListaMarcas() {
 		List<Marca> lista = new ArrayList<Marca>();

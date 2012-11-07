@@ -9,8 +9,10 @@ public enum Marca {
 	ATI("ATI"),
 	NVIDIA("Nvidia"),
 	AMD("AMD"),
-	SAMSUNG("SAMSUNG");
-    
+	SAMSUNG("Samsung"),
+	KINGSTON("Kingston"),
+	CORSAIR("Corsair");
+	
     private String nome;
 
     private Marca(String nome) {

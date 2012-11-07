@@ -27,6 +27,7 @@ public class Main {
 				opc=0;
 		}
 		System.out.println(g.getDescricao());
+		System.out.println("Custando " + g.getCusto());
 	}
 	
 private static PecasDecorator menu_principal(Scanner input,Gabinete g) throws IOException{
@@ -39,7 +40,7 @@ private static PecasDecorator menu_principal(Scanner input,Gabinete g) throws IO
 		case 2: return new Processador(g, menu_marcas(input, Processador.getListaMarcas()));
 		case 3: return new Mem_Ram(g, menu_marcas(input, Mem_Ram.getListaMarcas())); 
 		case 4: return new HD(g, menu_marcas(input, HD.getListaMarcas()));
-		case 5: return new Gravador_de_DVD(g, menu_marcas(input, Gravador_de_DVD.getListaMarcas()));
+		case 5: return new Gravador_de_DVD(g, menu_marcas(input, Gravador_de_DVD.getListaMarcas())); 
 		case 6: return new Placa_Video(g, menu_marcas(input, Placa_Video.getListaMarcas()));
 	default:
 		return null;
@@ -58,10 +59,9 @@ private static Marca menu_marcas(Scanner input, List<Marca> lista) throws IOExce
 	}
 		
 	opc=input.nextInt();
-	if (opc==1)
-		return Marca.INTEL;
-	else
-		return Marca.AMD;
+	
+		return lista.get(opc - 1);
+	
 }
 
 private static void imprimeOpcoes(){
@@ -74,7 +74,7 @@ private static void imprimeOpcoes(){
      System.out.println((tipo.ordinal()+1) + " - " + tipo);
    }
 	System.out.println("0-Para sair");
-	System.out.println("Digite a opção desejada:");
+	System.out.println("Digite a opcao desejada:");
 	
 	
 	

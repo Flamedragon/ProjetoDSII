@@ -1,27 +1,13 @@
 package Main;
 
-import java.io.Console;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import Componentes.Gabinete;
-import Componentes.GabineteGamer;
-import Componentes.Gravador_de_BD;
-import Componentes.Gravador_de_CD;
-import Componentes.Gravador_de_DVD;
-import Componentes.HD_Seagate;
-import Componentes.HD_WD;
-import Componentes.Mem_Ram_Corsair;
-import Componentes.Mem_Ram_Kingsdom;
-import Componentes.PecasDecorator;
-import Componentes.Placa_Mae_Asus;
-import Componentes.Placa_Mae_Intel;
-import Componentes.Placa_Video_ATI;
-import Componentes.Placa_Video_Nvidia;
-import Componentes.Processador_AMD;
-import Componentes.Processador_Intel;
+import Componentes.*;
+
 import Enum.Item;
 import Enum.TipoPeca;
 
@@ -52,7 +38,7 @@ private static Item menu_principal(Scanner input) throws IOException{
 //	System.out.println("6-Gravadora");
 //	System.out.println("0-Para sair");
 //	System.out.println("Digite a opÃ§Ã£o desejada:");
-	imprimeOpções();
+	imprimeOpcoes();
 	opc= input.nextInt();
 	switch(opc){
 		case 1: return menu_placa_mae(input);
@@ -90,7 +76,7 @@ private static Item menu_memoria(Scanner input) throws IOException {
 		return Item.MEM_RAM_KINGSDOM;
 }
 
-private static void imprimeOpções(){
+private static void imprimeOpcoes(){
 	
 	System.out.println("Qual Itens deseja adicionar ao Gabinete? \n");
 	

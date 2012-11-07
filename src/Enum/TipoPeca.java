@@ -2,11 +2,11 @@ package Enum;
 
 public enum TipoPeca {
 		
-	PLACA_MAE("Placa-m�e"),
-    MEMORIA("Mem�ria"),
+	PLACA_MAE("Placa-mae"),
+    MEMORIA("Memoria"),
     HD("HD"),
     GRAVADOR("Gravador"),
-	PLACA_VIDEO("Placa de v�deo"),
+	PLACA_VIDEO("Placa de video"),
 	PROCESSADOR("Processador");
     
     private String nome;

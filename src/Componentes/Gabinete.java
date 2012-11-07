@@ -26,8 +26,10 @@ public abstract class Gabinete {
 		return this.descricao;
 	}
 	
-	//Método Template
+	//Mï¿½todo Template
 	public abstract float getCusto();
+	
+	//public void add
 
 	
 

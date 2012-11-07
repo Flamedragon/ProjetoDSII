@@ -9,7 +9,8 @@ public class Mem_Ram_Kingsdom extends PecasDecorator{
 	
 	public Mem_Ram_Kingsdom(Gabinete g){
 		tipoPeca = TipoPeca.MEMORIA;
-		descricao= g.descricao + "c/ Memória Kingsdom";
+		gab=g;
+		//descricao= g.descricao + "c/ Memï¿½ria Kingsdom";
 	}
 	
 	public float getCusto(){
@@ -17,7 +18,7 @@ public class Mem_Ram_Kingsdom extends PecasDecorator{
 	}
 	
 	public String getDescricao(){
-		return descricao;
+		return gab.getDescricao() + ", " + this.tipoPeca + " Kingsdom";
 	}
 
 }

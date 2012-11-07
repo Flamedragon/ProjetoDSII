@@ -12,7 +12,8 @@ public class Mem_Ram_Corsair extends PecasDecorator{
 	
 	public Mem_Ram_Corsair(Gabinete g){
 		tipoPeca = TipoPeca.MEMORIA;
-		descricao= g.descricao + "c/ Mem�ria Corsair";
+		gab = g;
+		//descricao= g.descricao + "c/ Mem�ria Corsair";
 	}
 	
 	public float getCusto(){
@@ -20,7 +21,7 @@ public class Mem_Ram_Corsair extends PecasDecorator{
 	}
 	
 	public String getDescricao(){
-		return descricao;
+		return gab.getDescricao() + ", " + this.tipoPeca + " Corsair";
 	}
 
 }

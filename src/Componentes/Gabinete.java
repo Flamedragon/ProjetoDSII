@@ -29,7 +29,7 @@ public abstract class Gabinete {
 		return this.descricao;
 	}
 	
-	//M�todo Template
+
 	public abstract float getCusto();
 	
 	public PecasDecorator addPecas(int numItem){
@@ -62,10 +62,7 @@ public abstract class Gabinete {
 			return null;
 		}
 	}
-
 	
-
-
 }
 
 	

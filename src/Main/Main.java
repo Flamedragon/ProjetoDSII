@@ -2,6 +2,8 @@ package Main;
 
 import java.io.Console;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import Componentes.Gabinete;
@@ -21,6 +23,7 @@ import Componentes.Placa_Video_Nvidia;
 import Componentes.Processador_AMD;
 import Componentes.Processador_Intel;
 import Enum.Item;
+import Enum.TipoPeca;
 
 public class Main {
 	public static void main(String args[]) throws IOException{
@@ -40,15 +43,16 @@ public class Main {
 	
 private static Item menu_principal(Scanner input) throws IOException{
 	int opc;
-	System.out.println("Qual Itens deseja adicionar ao Gabinete:");
-	System.out.println("1-Placa Mãe");
-	System.out.println("2-Processador");
-	System.out.println("3-Memória");
-	System.out.println("4-HD");
-	System.out.println("5-Placa de Vídeo");
-	System.out.println("6-Gravadora");
-	System.out.println("0-Para sair");
-	System.out.println("Digite a opção desejada:");
+//	System.out.println("Qual Itens deseja adicionar ao Gabinete:");
+//	System.out.println("1-Placa Mãe");
+//	System.out.println("2-Processador");
+//	System.out.println("3-Memória");
+//	System.out.println("4-HD");
+//	System.out.println("5-Placa de Vídeo");
+//	System.out.println("6-Gravadora");
+//	System.out.println("0-Para sair");
+//	System.out.println("Digite a opção desejada:");
+	imprimeOp��es();
 	opc= input.nextInt();
 	switch(opc){
 		case 1: return menu_placa_mae(input);
@@ -84,6 +88,22 @@ private static Item menu_memoria(Scanner input) throws IOException {
 		return Item.MEM_RAM_CORSAIR;
 	else
 		return Item.MEM_RAM_KINGSDOM;
+}
+
+private static void imprimeOp��es(){
+	
+	System.out.println("Qual Itens deseja adicionar ao Gabinete? \n");
+	
+
+	for (TipoPeca tipo: TipoPeca.values())
+   {
+     System.out.println((tipo.ordinal()+1) + " - " + tipo);
+   }
+	System.out.println("0-Para sair");
+	System.out.println("Digite a opção desejada:");
+	
+	
+	
 }
 
 

@@ -1,18 +1,16 @@
 package Componentes;
 
-import java.util.List;
+import Enum.TipoPeca;
+
+
+
+//import Enum.TipoPeca;
 
 public class Placa_Mae_Asus extends PecasDecorator {
-
-	String tipo = "Placa Mãe";
+	
 	
 	public Placa_Mae_Asus(Gabinete g) {
-
-		for (List<PecasDecorator> g.componentes : comp) {
-			
-		}
-		
-		g.componentes.add(this);
+		tipoPeca = TipoPeca.PLACA_MAE;
 		descricao= g.descricao + "c/ placa mãe Asus";
 		// TODO Auto-generated constructor stub
 	}
@@ -29,6 +27,7 @@ public class Placa_Mae_Asus extends PecasDecorator {
 		// TODO Auto-generated method stub
 		return 100;
 	}
+
 
 
 }

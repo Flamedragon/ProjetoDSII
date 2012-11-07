@@ -1,5 +1,6 @@
 package Componentes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Enum.Marca;
@@ -37,9 +38,8 @@ public class HD extends PecasDecorator {
 		 
 	}
 
-	@Override
-	public List<Marca> getListaMarcas() {
-		List<Marca> lista = listaMarcas;
+	public static List<Marca> getListaMarcas() {
+		List<Marca> lista = new ArrayList<Marca>() ;
 		lista.add(Marca.WD);
 		lista.add(Marca.SEAGATE);
 		return lista;

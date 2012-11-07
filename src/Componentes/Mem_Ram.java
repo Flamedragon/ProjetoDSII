@@ -40,12 +40,12 @@ public class Mem_Ram extends PecasDecorator{
 		return gab.descricao + ", " + this.tipoPeca + marca + ".";
 	}
 
-	public List<Marca> getListaMarcas() {
+/*	public List<Marca> getListaMarcas() {
 		List<Marca> lista = listaMarcas;
 		lista.add(Marca.CORSAIR);
 		lista.add(Marca.KINGSTON);
 		return lista;
-	}
+	} */
 	
 }
 

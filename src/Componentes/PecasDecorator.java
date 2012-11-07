@@ -10,7 +10,7 @@ public abstract class PecasDecorator extends Gabinete{
 	protected TipoPeca tipoPeca;
 	protected Gabinete gab;
 	protected Marca marca;
-	protected List<Marca> listaMarcas;
+	//protected List<Marca> listaMarcas;
 	
 	public abstract String getDescricao();
 
@@ -30,13 +30,11 @@ public abstract class PecasDecorator extends Gabinete{
 		this.marca = marca;
 	}
 
-	public List<Marca> getListaMarcas() {
-		return listaMarcas;
-	}
+	protected static List<Marca> getListaMarcas(){return null;};
 
-	public void setListaMarcas(List<Marca> listaMarcas) {
+ /*	public void setListaMarcas(List<Marca> listaMarcas) {
 		this.listaMarcas = listaMarcas;
-	}
+	} */
 	
 	
 

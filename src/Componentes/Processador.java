@@ -1,5 +1,6 @@
 package Componentes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Enum.Marca;
@@ -7,8 +8,9 @@ import Enum.TipoPeca;
 
 public class Processador extends PecasDecorator {
 
-	public Processador(Gabinete g) {
+	public Processador(Gabinete g, Marca m) {
 		gab = g;
+		marca=m;
 		tipoPeca = TipoPeca.PROCESSADOR;
 //		descricao= g.descricao + " " + tipoPeca.toString() + " AMD";
 	}
@@ -37,9 +39,8 @@ public class Processador extends PecasDecorator {
 		 
 	}
 	
-	@Override
-	public List<Marca> getListaMarcas() {
-		List<Marca> lista = listaMarcas;
+	public static List<Marca> getListaMarcas() {
+		List<Marca> lista = new ArrayList<Marca>() ;
 		lista.add(Marca.AMD);
 		lista.add(Marca.INTEL);
 		return lista;

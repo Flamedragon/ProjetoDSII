@@ -3,12 +3,14 @@ package Main;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
 import Componentes.*;
 
 import Enum.Item;
+import Enum.Marca;
 import Enum.TipoPeca;
 
 public class Main {
@@ -18,16 +20,17 @@ public class Main {
 		//Gabinete result;
 		Gabinete g = new GabineteGamer();
 		while (opc!=0){
-			Item i= menu_principal(input);
-			if (i!=null)
-				g = g.addPecas(i.getInt());    //Item.PLACA_MAE_INTEL);
+			//Item i= menu_principal(input);
+			PecasDecorator aux = menu_principal(input,g);
+			if (aux!=null)
+			g = aux;  // g.addPecas(i.getInt());    //Item.PLACA_MAE_INTEL);
 			else
 				opc=0;
 		}
 		System.out.println(g.getDescricao());
 	}
 	
-private static Item menu_principal(Scanner input) throws IOException{
+private static PecasDecorator menu_principal(Scanner input,Gabinete g) throws IOException{
 	int opc;
 //	System.out.println("Qual Itens deseja adicionar ao Gabinete:");
 //	System.out.println("1-Placa Mãe");
@@ -41,14 +44,16 @@ private static Item menu_principal(Scanner input) throws IOException{
 	imprimeOpcoes();
 	opc= input.nextInt();
 	switch(opc){
-		case 1: return menu_placa_mae(input);
-		case 3: return menu_memoria(input); 
+		//case 0: return g;
+		case 1: return new Placa_Mae(g, menu_placa_mae(input)); //Item.PLACA_MAE ;//return menu_placa_mae(input);
+		case 2: return new Processador(g, menu_marcas(input,Processador.getListaMarcas()));
+//		case 3: return menu_memoria(input); 
 	default:
 		return null;
 	}
 }
 
-private static Item menu_placa_mae(Scanner input) throws IOException {
+private static Marca menu_placa_mae(Scanner input) throws IOException {
 	int opc;
 	for (int i=0;i<10;i++)
 		System.out.println("==============");
@@ -57,11 +62,29 @@ private static Item menu_placa_mae(Scanner input) throws IOException {
 	System.out.println("2-Asus");
 	opc=input.nextInt();
 	if (opc==1)
-		return Item.PLACA_MAE_INTEL;
+		return Marca.INTEL;
 	else
-		return Item.PLACA_MAE_ASUS;
+		return Marca.AMD;
 }
 
+private static Marca menu_marcas(Scanner input, List<Marca> lista) throws IOException {
+	int opc;
+	for (int i=0;i<10;i++)
+		System.out.println("==============");
+	System.out.println("Qual das Marcas deseja:");
+	int i=1;
+	for (Marca m: lista) {
+		System.out.println(i + "-" + m);
+		i++;
+	}
+		
+	opc=input.nextInt();
+	if (opc==1)
+		return Marca.INTEL;
+	else
+		return Marca.AMD;
+}
+/*
 private static Item menu_memoria(Scanner input) throws IOException {
 	int opc;
 	for (int i=0;i<10;i++)
@@ -74,7 +97,7 @@ private static Item menu_memoria(Scanner input) throws IOException {
 		return Item.MEM_RAM_CORSAIR;
 	else
 		return Item.MEM_RAM_KINGSDOM;
-}
+} */
 
 private static void imprimeOpcoes(){
 	

@@ -37,12 +37,12 @@ public class Placa_Video extends PecasDecorator {
 		 
 	}
 
-	@Override
-	public List<Marca> getListaMarcas() {
+
+/*	public List<Marca> getListaMarcas() {
 		List<Marca> lista = listaMarcas;
 		lista.add(Marca.ATI);
 		lista.add(Marca.NVIDIA);
 		return lista;
-	}
+	} */
 	
 }

@@ -1,6 +1,7 @@
 
 package Componentes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Enum.Marca;
@@ -13,15 +14,16 @@ import Enum.TipoPeca;
 public class Placa_Mae extends PecasDecorator {
 	
 	
-	public Placa_Mae(Gabinete g) {
+	public Placa_Mae(Gabinete g,Marca m) {
 		tipoPeca = TipoPeca.PLACA_MAE;
+		marca=m;
 		gab = g;
 		//descricao= g.descricao + "c/ placa m�e Asus";
 	}
 
 	@Override
 	public String getDescricao() {
-		return gab.descricao + ", " + this.tipoPeca + marca + ".";
+		return gab.descricao + ", " + this.tipoPeca + " "+ marca + ".";
 	}
 
 
@@ -34,7 +36,7 @@ public class Placa_Mae extends PecasDecorator {
 	    switch (marca) {
 
 	    case ASUS: cus = 100;	break;
-		case INTEL: cus = 100; break;
+		case INTEL: cus = 150; break;
 
 		default: cus = 0;	break;
 		}
@@ -43,9 +45,9 @@ public class Placa_Mae extends PecasDecorator {
 		 
 	}
 
-	@Override
-	public List<Marca> getListaMarcas() {
-		List<Marca> lista = listaMarcas;
+	public static List<Marca> getListaMarcas() {
+		List<Marca> lista = new ArrayList<Marca>() ;
+				//listaMarcas;
 		lista.add(Marca.ASUS);
 		lista.add(Marca.INTEL);
 		return lista;

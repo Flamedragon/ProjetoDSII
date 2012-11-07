@@ -1,10 +1,13 @@
 package Componentes;
 
+import java.util.List;
+
+import Enum.Marca;
 import Enum.TipoPeca;
 
-public class HD_Seagate extends PecasDecorator {
+public class HD extends PecasDecorator {
 
-	public HD_Seagate(Gabinete g) {
+	public HD(Gabinete g) {
 		tipoPeca = TipoPeca.HD;
 		descricao= g.descricao + " " + tipoPeca.toString() + " Seagate";
 	}
@@ -21,4 +24,12 @@ public class HD_Seagate extends PecasDecorator {
 		return 140;
 	}
 
+	@Override
+	public List<Marca> getListaMarcas() {
+		List<Marca> lista = listaMarcas;
+		lista.add(Marca.WD);
+		lista.add(Marca.SEAGATE);
+		return lista;
+	}
+	
 }

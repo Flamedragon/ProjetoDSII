@@ -19,7 +19,7 @@ public Gravador_de_DVD(Gabinete g, Marca m) {
 @Override
 public String getDescricao() {
 	
-	return gab.getDescricao() + ", " + this.tipoPeca + marca;
+	return gab.getDescricao() + ", " + this.tipoPeca + " "+ marca;
 }
 
 @Override

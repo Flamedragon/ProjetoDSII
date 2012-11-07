@@ -18,7 +18,7 @@ public class HD extends PecasDecorator {
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		return gab.getDescricao() + ", " + this.tipoPeca + marca + ".";
+		return gab.getDescricao() + ", " + this.tipoPeca + " " + marca ;
 	}
 
 	@Override

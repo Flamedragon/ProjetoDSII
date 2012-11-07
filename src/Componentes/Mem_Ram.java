@@ -38,7 +38,7 @@ public class Mem_Ram extends PecasDecorator{
 	}
 	
 	public String getDescricao(){
-		return gab.getDescricao() + ", " + this.tipoPeca + marca + ".";
+		return gab.getDescricao() + ", " + this.tipoPeca +" " + marca;
 	}
 
 	public static List<Marca> getListaMarcas() {

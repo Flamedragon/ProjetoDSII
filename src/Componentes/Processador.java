@@ -12,7 +12,6 @@ public class Processador extends PecasDecorator {
 		gab = g;
 		marca=m;
 		tipoPeca = TipoPeca.PROCESSADOR;
-//		descricao= g.descricao + " " + tipoPeca.toString() + " AMD";
 	}
 	
 	@Override

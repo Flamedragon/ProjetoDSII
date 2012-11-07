@@ -11,7 +11,7 @@ public class HD extends PecasDecorator {
 	public HD(Gabinete g) {
 		tipoPeca = TipoPeca.HD;
 		gab = g;
-		//		descricao= g.descricao + " " + tipoPeca.toString() + marca + ".";
+
 	}
 	
 	@Override

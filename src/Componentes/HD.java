@@ -8,16 +8,17 @@ import Enum.TipoPeca;
 
 public class HD extends PecasDecorator {
 
-	public HD(Gabinete g) {
+	public HD(Gabinete g,Marca m) {
 		tipoPeca = TipoPeca.HD;
 		gab = g;
+		marca= m;
 
 	}
 	
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		return gab.descricao + ", " + this.tipoPeca + marca + ".";
+		return gab.getDescricao() + ", " + this.tipoPeca + marca + ".";
 	}
 
 	@Override

@@ -2,6 +2,7 @@
 package Componentes;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Enum.Marca;
@@ -13,10 +14,10 @@ public class Mem_Ram extends PecasDecorator{
 	//teste4asdasdas
 	
 	
-	public Mem_Ram(Gabinete g){
+	public Mem_Ram(Gabinete g,Marca m){
 		tipoPeca = TipoPeca.MEMORIA;
 		gab = g;
-		//descricao= g.descricao + "c/ Mem�ria Corsair";
+		marca= m;
 	}
 	
 	public float getCusto() {
@@ -37,15 +38,15 @@ public class Mem_Ram extends PecasDecorator{
 	}
 	
 	public String getDescricao(){
-		return gab.descricao + ", " + this.tipoPeca + marca + ".";
+		return gab.getDescricao() + ", " + this.tipoPeca + marca + ".";
 	}
 
-/*	public List<Marca> getListaMarcas() {
-		List<Marca> lista = listaMarcas;
+	public static List<Marca> getListaMarcas() {
+		List<Marca> lista = new ArrayList<Marca>();
 		lista.add(Marca.CORSAIR);
 		lista.add(Marca.KINGSTON);
 		return lista;
-	} */
-	
+	} 
+		
 }
 

@@ -1,5 +1,6 @@
 package Componentes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Enum.Marca;
@@ -7,16 +8,16 @@ import Enum.TipoPeca;
 
 public class Placa_Video extends PecasDecorator {
 
-	public Placa_Video(Gabinete g) {
+	public Placa_Video(Gabinete g, Marca m) {
 		tipoPeca = TipoPeca.PLACA_VIDEO;
 		gab = g;
-		//		descricao= g.descricao + " " + tipoPeca.toString() + " ATI";
+		marca=m;
 	}
 	
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		return gab.descricao + ", " + this.tipoPeca + marca + ".";
+		return gab.getDescricao() + ", " + this.tipoPeca + marca + ".";
 	}
 
 	@Override
@@ -38,11 +39,11 @@ public class Placa_Video extends PecasDecorator {
 	}
 
 
-/*	public List<Marca> getListaMarcas() {
-		List<Marca> lista = listaMarcas;
+	public static List<Marca> getListaMarcas() {
+		List<Marca> lista = new ArrayList<Marca>();
 		lista.add(Marca.ATI);
 		lista.add(Marca.NVIDIA);
 		return lista;
-	} */
+	} 
 	
 }

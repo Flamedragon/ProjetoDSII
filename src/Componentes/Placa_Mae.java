@@ -23,7 +23,7 @@ public class Placa_Mae extends PecasDecorator {
 
 	@Override
 	public String getDescricao() {
-		return gab.descricao + ", " + this.tipoPeca + " "+ marca + ".";
+		return gab.getDescricao() + ", " + this.tipoPeca + " "+ marca + ".";
 	}
 
 

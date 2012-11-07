@@ -35,26 +35,14 @@ private static PecasDecorator menu_principal(Scanner input,Gabinete g) throws IO
 	opc= input.nextInt();
 	switch(opc){
 		//case 0: return g;
-		case 1: return new Placa_Mae(g, menu_marcas(input,Placa_Mae.getListaMarcas())); //Item.PLACA_MAE ;//return menu_placa_mae(input);
-		case 2: return new Processador(g, menu_marcas(input,Processador.getListaMarcas()));
-//		case 3: return menu_memoria(input); 
+		case 1: return new Placa_Mae(g, menu_marcas(input, Placa_Mae.getListaMarcas())); //Item.PLACA_MAE ;//return menu_placa_mae(input);
+		case 2: return new Processador(g, menu_marcas(input, Processador.getListaMarcas()));
+		case 3: return new Mem_Ram(g, menu_marcas(input, Mem_Ram.getListaMarcas())); 
+		case 4: return new HD(g, menu_marcas(input, HD.getListaMarcas()));
+		case 6: return new Placa_Video(g, menu_marcas(input, Placa_Video.getListaMarcas()));
 	default:
 		return null;
 	}
-}
-
-private static Marca menu_placa_mae(Scanner input) throws IOException {
-	int opc;
-	for (int i=0;i<10;i++)
-		System.out.println("==============");
-	System.out.println("Qual das Placas deseja:");
-	System.out.println("1-Intel");
-	System.out.println("2-Asus");
-	opc=input.nextInt();
-	if (opc==1)
-		return Marca.INTEL;
-	else
-		return Marca.AMD;
 }
 
 private static Marca menu_marcas(Scanner input, List<Marca> lista) throws IOException {

@@ -11,7 +11,7 @@ public class Placa_Mae_Intel extends PecasDecorator {
 	
 	public Placa_Mae_Intel(Gabinete g) {
 		tipoPeca = TipoPeca.PLACA_MAE;
-		descricao= g.descricao + "c/ placa mãe Asus";
+		descricao= g.descricao + "c/ placa mãe Intel";
 		// TODO Auto-generated constructor stub
 	}
 

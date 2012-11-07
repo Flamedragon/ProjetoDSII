@@ -1,6 +1,9 @@
 package Componentes;
 
+import java.awt.Component;
 import java.util.List;
+
+import Enum.Item;
 
 public abstract class Gabinete {
 	protected String descricao = "Gabinete Desconhecido";
@@ -29,7 +32,14 @@ public abstract class Gabinete {
 	//M�todo Template
 	public abstract float getCusto();
 	
-	//public void add
+	public PecasDecorator addPecas(Item i){
+		if (i.equals(Item.PLACA_MAE_INTEL))
+			return new Placa_Mae_Intel(this);
+		else
+			return new Placa_Mae_Asus(this);
+		//return null;this.componentes.add(p);
+		
+	}
 
 	
 

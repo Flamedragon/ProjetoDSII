@@ -34,7 +34,7 @@ public class Processador extends PecasDecorator {
 		default: cus = 0;	break;
 		}
 	     
-	    return cus;
+	    return cus + gab.getCusto();
 		 
 	}
 	

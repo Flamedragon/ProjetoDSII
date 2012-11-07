@@ -4,16 +4,16 @@ import java.util.List;
 
 public class Placa_Mae_Asus extends PecasDecorator {
 
-	String tipo = "Placa M„e";
+	String tipo = "Placa M√£e";
 	
 	public Placa_Mae_Asus(Gabinete g) {
 
-		for (List<PecasDecorator> g.componentes : comp) {
+		//for (List<PecasDecorator> g.componentes : comp) {
 			
-		}
+//		}
 		
 		g.componentes.add(this);
-		descricao= g.descricao + "c/ placa m„e Asus";
+		descricao= g.descricao + "c/ placa m√£e Asus";
 		// TODO Auto-generated constructor stub
 	}
 

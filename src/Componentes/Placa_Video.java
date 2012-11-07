@@ -5,12 +5,12 @@ import java.util.List;
 import Enum.Marca;
 import Enum.TipoPeca;
 
-public class HD extends PecasDecorator {
+public class Placa_Video extends PecasDecorator {
 
-	public HD(Gabinete g) {
-		tipoPeca = TipoPeca.HD;
+	public Placa_Video(Gabinete g) {
+		tipoPeca = TipoPeca.PLACA_VIDEO;
 		gab = g;
-		//		descricao= g.descricao + " " + tipoPeca.toString() + marca + ".";
+		//		descricao= g.descricao + " " + tipoPeca.toString() + " ATI";
 	}
 	
 	@Override
@@ -27,8 +27,8 @@ public class HD extends PecasDecorator {
 		
 	    switch (marca) {
 
-	    case WD: cus = 180;	break;
-		case SEAGATE: cus = 140; break;
+	    case ATI: cus = 130;	break;
+		case NVIDIA: cus = 120; break;
 
 		default: cus = 0;	break;
 		}
@@ -40,8 +40,8 @@ public class HD extends PecasDecorator {
 	@Override
 	public List<Marca> getListaMarcas() {
 		List<Marca> lista = listaMarcas;
-		lista.add(Marca.WD);
-		lista.add(Marca.SEAGATE);
+		lista.add(Marca.ATI);
+		lista.add(Marca.NVIDIA);
 		return lista;
 	}
 	

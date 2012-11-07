@@ -39,6 +39,7 @@ private static PecasDecorator menu_principal(Scanner input,Gabinete g) throws IO
 		case 2: return new Processador(g, menu_marcas(input, Processador.getListaMarcas()));
 		case 3: return new Mem_Ram(g, menu_marcas(input, Mem_Ram.getListaMarcas())); 
 		case 4: return new HD(g, menu_marcas(input, HD.getListaMarcas()));
+		case 5: return new Gravador_de_DVD(g, menu_marcas(input, Gravador_de_DVD.getListaMarcas()));
 		case 6: return new Placa_Video(g, menu_marcas(input, Placa_Video.getListaMarcas()));
 	default:
 		return null;

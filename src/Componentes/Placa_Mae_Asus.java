@@ -12,13 +12,13 @@ public class Placa_Mae_Asus extends PecasDecorator {
 	
 	public Placa_Mae_Asus(Gabinete g) {
 		tipoPeca = TipoPeca.PLACA_MAE;
-		descricao= g.descricao + "c/ placa m�e Asus";
+		gab = g;
+		//descricao= g.descricao + "c/ placa m�e Asus";
 	}
 
 	@Override
 	public String getDescricao() {
-
-		return this.descricao;
+		return gab.descricao + ", " + this.tipoPeca + " Asus";
 	}
 
 

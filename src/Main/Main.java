@@ -15,7 +15,7 @@ public class Main {
 		Gabinete result;
 		Gabinete g = new GabineteGamer();
 		Item i= menu_principal(input);
-		result = g.addPecas(i);    //Item.PLACA_MAE_INTEL);
+		result = g.addPecas(i.getInt());    //Item.PLACA_MAE_INTEL);
 		System.out.println(result.getDescricao());
 	}
 	
@@ -29,6 +29,7 @@ private static Item menu_principal(Scanner input) throws IOException{
 	opc= input.nextInt();
 	if (opc==1)
 		return menu_placa_mae(input);
+	
 	return null;
 }
 

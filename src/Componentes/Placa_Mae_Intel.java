@@ -11,14 +11,12 @@ public class Placa_Mae_Intel extends PecasDecorator {
 	
 	public Placa_Mae_Intel(Gabinete g) {
 		tipoPeca = TipoPeca.PLACA_MAE;
-		descricao= g.descricao + " " + tipoPeca + " Intel";
-		// TODO Auto-generated constructor stub
+		gab = g;
 	}
 
 	@Override
 	public String getDescricao() {
-		// TODO Auto-generated method stub
-		return this.descricao;
+		return gab.descricao +", " + this.tipoPeca + " Intel";
 	}
 
 

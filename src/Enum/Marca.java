@@ -13,7 +13,10 @@ public enum Marca {
 	KINGSTON("Kingston"),
 	CORSAIR("Corsair"),
 	LG("Lg"),
-	SONY("Sony");
+	SONY("Sony"),
+	GAMER("Gamer"),
+	CLONE("Clone"),
+	GENERICO("Genérico");
 	
     private String nome;
 

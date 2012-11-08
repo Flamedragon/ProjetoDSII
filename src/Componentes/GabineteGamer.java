@@ -1,5 +1,10 @@
 package Componentes;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import Enum.Marca;
+
 public class GabineteGamer extends Gabinete{
 	
 		
@@ -12,7 +17,7 @@ public class GabineteGamer extends Gabinete{
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		return "Gabinete Gamer";
+		return "Gabinete " + Marca.GAMER;
 	}
 	
 	@Override
@@ -20,5 +25,13 @@ public class GabineteGamer extends Gabinete{
 		return 175;
 	}
 	
+	public static List<Marca> getListaMarcas() {
+		List<Marca> lista = new ArrayList<Marca>() ;
+				//listaMarcas;
+		lista.add(Marca.GAMER);
+		lista.add(Marca.CLONE);
+		lista.add(Marca.GENERICO);
+		return lista;
+	}
 
 }

@@ -15,10 +15,20 @@ import Enum.TipoPeca;
 public class Main {
 	public static void main(String args[]) throws IOException{
 		int opc=-1;
+		Gabinete g;
 		Scanner input= new Scanner(System.in);
-		Gabinete g = new GabineteGamer();
+		System.out.println("Qual Gabinete o cliente deseja? \n");
+		switch( menu_marcas(input, GabineteGamer.getListaMarcas()) ){
+		case GAMER: g = new GabineteGamer();
+					break;
+		case CLONE: g=new GabineteClone();
+		default:
+			g=new GabineteGenerico();
+		}
+		for (int i=0;i<4;i++)
+			System.out.println("==============");
+		
 		while (opc!=0){
-			//Item i= menu_principal(input);
 			PecasDecorator aux = menu_principal(input,g);
 			if (aux!=null)
 			g = aux; 
@@ -56,7 +66,7 @@ private static Marca menu_marcas(Scanner input, List<Marca> lista) throws IOExce
 		System.out.println(i + "-" + m);
 		i++;
 	}
-		
+	System.out.println("Opção:");	
 	opc=input.nextInt();
 	
 		return lista.get(opc - 1);

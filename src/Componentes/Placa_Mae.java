@@ -35,8 +35,8 @@ public class Placa_Mae extends PecasDecorator {
 		
 	    switch (marca) {
 
-	    case ASUS: if (gab.getDescricao().contains("Asus"))cus = 80;else cus = 100;	break;
-		case INTEL: if (gab.getDescricao().contains("Intel")) cus = 120; else cus = 150; break;
+	    case ASUS: cus = 100;	break;
+		case INTEL: cus = 150; break;
 
 		default: cus = 0;	break;
 		}

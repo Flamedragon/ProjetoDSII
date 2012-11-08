@@ -22,6 +22,7 @@ public class Main {
 		case GAMER: g = new GabineteGamer();
 					break;
 		case CLONE: g=new GabineteClone();
+					break;
 		default:
 			g=new GabineteGenerico();
 		}

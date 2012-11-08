@@ -3,13 +3,13 @@ package Componentes;
 
 
 public abstract class Gabinete {
-	protected String descricao = "Gabinete Desconhecido";
+	
 	
 	
 
 	
 	public String getDescricao() {
-		return this.descricao;
+		return "Gabinete Desconhecido";
 	}
 	
 

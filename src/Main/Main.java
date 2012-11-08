@@ -32,7 +32,7 @@ public class Main {
 		while (opc!=0){
 			PecasDecorator aux = menu_principal(input,g);
 			if (aux!=null)
-			g = aux; 
+				g = aux; 
 			else
 				opc=0;
 		}
@@ -45,13 +45,21 @@ private static PecasDecorator menu_principal(Scanner input,Gabinete g) throws IO
 	imprimeOpcoes();
 	opc= input.nextInt();
 	switch(opc){
-		//case 0: return g;
-		case 1: return new Placa_Mae(g, menu_marcas(input, Placa_Mae.getListaMarcas())); //Item.PLACA_MAE ;//return menu_placa_mae(input);
-		case 2: return new Processador(g, menu_marcas(input, Processador.getListaMarcas()));
+		case 1: if ( !(g.getDescricao().contains(TipoPeca.PLACA_MAE.toString())) )
+					return new Placa_Mae(g, menu_marcas(input, Placa_Mae.getListaMarcas()));
+				else System.out.println("Gabinete Já contém Placa Mãe"); 
+					return menu_principal(input,g);//Item.PLACA_MAE ;//return menu_placa_mae(input);
+		case 2: if ( !(g.getDescricao().contains(TipoPeca.PROCESSADOR.toString())) )
+					return new Processador(g, menu_marcas(input, Processador.getListaMarcas()));
+				else System.out.println("Gabinete Já contém Processador");
+					return menu_principal(input,g);
 		case 3: return new Mem_Ram(g, menu_marcas(input, Mem_Ram.getListaMarcas())); 
 		case 4: return new HD(g, menu_marcas(input, HD.getListaMarcas()));
 		case 5: return new Gravador_de_DVD(g, menu_marcas(input, Gravador_de_DVD.getListaMarcas())); 
-		case 6: return new Placa_Video(g, menu_marcas(input, Placa_Video.getListaMarcas()));
+		case 6: if ( !(g.getDescricao().contains(TipoPeca.PLACA_VIDEO.toString())) )
+					return new Placa_Video(g, menu_marcas(input, Placa_Video.getListaMarcas()));
+				else System.out.println("Gabinete Já contém Placa de Vídeo"); 
+					menu_principal(input,g);
 	default:
 		return null;
 	}

@@ -17,7 +17,7 @@ public class Placa_Video extends PecasDecorator {
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		if(gab.getDescricao().contains("AMD")) return gab.getDescricao() + ", " + this.tipoPeca + " " + marca + " c/ desconto de 20% pelo Processador AMD" ;
+		if(gab.getDescricao().contains("AMD") && this.marca==Marca.ATI) return gab.getDescricao() + ", " + this.tipoPeca + " " + marca + " c/ desconto de 20% pelo Processador AMD" ;
 		else return gab.getDescricao() + ", " + this.tipoPeca + " " + marca  ;
 	}
 

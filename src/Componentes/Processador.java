@@ -16,8 +16,9 @@ public class Processador extends PecasDecorator {
 	
 	@Override
 	public String getDescricao() {
-		if(gab.getDescricao().contains("Intel")) return gab.getDescricao() + ", " + this.tipoPeca +" "+ marca + " c/ desconto de 20% pela Placa Intel";
-		else return gab.getDescricao() + ", " + this.tipoPeca +" "+ marca;
+		if(gab.getDescricao().contains("Intel") && this.marca==Marca.INTEL) return gab.getDescricao() + ", " + this.tipoPeca +" "+ marca + " c/ desconto de 20% pela Placa Intel";
+		else
+			return gab.getDescricao() + ", " + this.tipoPeca +" "+ marca;
 	}
 
 	@Override
